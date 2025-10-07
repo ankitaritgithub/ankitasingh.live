@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankita Singh | Portfolio</title>
+    <meta name="description" content="Professional portfolio showcasing my work and experience">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3B82F6",
+                        dark: "#1E293B",
+                        light: "#F8FAFC"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 50%, #06B6D4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .professional-gradient {
+            background: linear-gradient(135deg, #1E40AF 0%, #7C3AED 50%, #0891B2 100%);
+        }
+        
+        .accent-blue {
+            color: #3B82F6;
+        }
+        
+        .accent-purple {
+            color: #8B5CF6;
+        }
+        
+        .accent-cyan {
+            color: #06B6D4;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body class="bg-light text-dark font-sans antialiased" style="font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji';">
+    <!-- Navigation -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">ANKITA SINGH</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Ankita Singh</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold mb-6">Software Engineer</h2>
+                    <p class="text-lg mb-8 text-gray-600 max-w-lg">Software Engineer with hands-on experience in backend development, Generative AI, and cloud infrastructure. Skilled in building scalable microservices and LLM-powered automation using Python, FastAPI, and LangGraph.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-primary text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">Contact Me</a>
+                        <a href="#projects" class="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">View Work</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate-slide-up">
+                    <img src="Gemini_Generated_Image_qyanmfqyanmfqyan.png" alt="Profile image" class="rounded-full w-96 h-96 md:w-[28rem] md:h-[28rem] object-cover mx-auto shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About + Skills (merged, dark themed) -->
+    <section id="about" class="py-16 bg-slate-900 text-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12">About <span class="gradient-text">Me</span></h2>
+
+            <p class="text-center text-slate-300 mt-4 max-w-3xl mx-auto">Passionate backend developer focused on building scalable microservices, AI‑driven systems, and cloud‑ready platforms at the intersection of software engineering and Generative AI.</p>
+
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+                <!-- Left: My Journey -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold mb-3">My Journey</h3>
+                    <p class="text-slate-300 leading-relaxed mb-3">With hands‑on experience in backend development, I specialize in creating robust, scalable microservices that can handle high‑traffic applications.</p>
+                    <p class="text-slate-300 leading-relaxed mb-3">My expertise spans modern web technologies, cloud infrastructure, and distributed systems. I'm particularly passionate about AI systems and their integration into real‑world applications using Python, FastAPI, and LangGraph.</p>
+                    <p class="text-slate-300 leading-relaxed">I believe in clean, maintainable code and best practices to deliver solutions that work today and scale for tomorrow.</p>
+                </div>
+
+                <!-- Right: What I Do card -->
+                <div class="rounded-2xl p-6 text-white bg-gradient-to-br from-slate-800 via-indigo-900 to-blue-700 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6">What I Do</h3>
+                    <ul class="space-y-5">
+                        <li class="flex items-start gap-4">
+                            <span class="shrink-0 mt-1 text-blue-200"><i class="fas fa-cogs"></i></span>
+                            <div>
+                                <p class="font-semibold">Backend Architecture</p>
+                                <p class="text-white/80 text-sm">Designing and implementing scalable microservices</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="shrink-0 mt-1 text-blue-200"><i class="fas fa-robot"></i></span>
+                            <div>
+                                <p class="font-semibold">AI Integration</p>
+                                <p class="text-white/80 text-sm">Building LLM‑powered systems with LangGraph</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="shrink-0 mt-1 text-blue-200"><i class="fas fa-cloud"></i></span>
+                            <div>
+                                <p class="font-semibold">Cloud Solutions</p>
+                                <p class="text-white/80 text-sm">Deploying and managing containerized applications on AWS Infrastructure</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Categorized Skills Grid (full width below both columns) -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- Languages -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-blue-400"><i class="fas fa-language"></i></span>
+                        <h4 class="font-semibold">Languages</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Java</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Python</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">JavaScript</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">TypeScript</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">SQL</span>
+                    </div>
+                </div>
+                <!-- Frontend -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-blue-400"><i class="fas fa-code"></i></span>
+                        <h4 class="font-semibold">Frontend</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">HTML</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">CSS</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">ReactJS</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">TailwindCSS</span>
+                    </div>
+                </div>
+                <!-- Backend & APIs -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-emerald-400"><i class="fas fa-server"></i></span>
+                        <h4 class="font-semibold">Backend & APIs</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">FastAPI</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Python</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Golang</span>
+                    </div>
+                </div>
+                <!-- Databases & Storage -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-indigo-400"><i class="fas fa-database"></i></span>
+                        <h4 class="font-semibold">Databases & Storage</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">PostgreSQL</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">MongoDB</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">VectorDB</span>
+                    </div>
+                </div>
+                <!-- AI / LLM -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-purple-400"><i class="fas fa-brain"></i></span>
+                        <h4 class="font-semibold">AI / LLM</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">LangGraph</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Groq LLM</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">LLaMA 3.1 / 3.2</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Transformers</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">AI Agents</span>
+                    </div>
+                </div>
+                <!-- Data & ML -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-yellow-400"><i class="fas fa-chart-line"></i></span>
+                        <h4 class="font-semibold">Data & ML</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">scikit‑learn</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">TensorFlow</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">PyTorch</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">pandas</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">NumPy</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">LLM Integration</span>
+                    </div>
+                </div>
+                <!-- Testing & QA -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-rose-400"><i class="fas fa-vial"></i></span>
+                        <h4 class="font-semibold">Testing & QA</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Selenium</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Cucumber</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Playwright</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Cypress</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Postman</span>
+                    </div>
+                </div>
+                <!-- DevOps & Cloud -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-cyan-400"><i class="fas fa-cloud"></i></span>
+                        <h4 class="font-semibold">Cloud & DevOps</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Docker</span>
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Git</span>
+                    </div>
+                </div>
+                <!-- Messaging & Streaming -->
+                <div class="bg-slate-800/70 border border-slate-700 rounded-xl p-5 shadow-md">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="text-yellow-400"><i class="fas fa-bolt"></i></span>
+                        <h4 class="font-semibold">Message Queues</h4>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-0.5 text-[11px] rounded-full bg-blue-900/30 text-blue-300 border border-blue-700">Apache Kafka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">My <span class="gradient-text">Experience</span></h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div class="absolute left-4 md:left-1/2 h-full w-0.5 bg-primary transform -translate-x-1/2"></div>
+                    
+                    <!-- Timeline items -->
+                    <!-- Experience 1 -->
+                    <div class="mb-8 relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <h3 class="text-xl font-bold">Software Engineer</h3>
+                                <p class="text-gray-600">Proeffico Solutions Pvt Ltd</p>
+                                <p class="text-sm text-gray-500">May 2025 – July 2025</p>
+                            </div>
+                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="bg-white p-6 rounded-lg shadow-md card-hover transition-all">
+                                    <p>Built a medical health chatbot using LLaMA 3.2 and LangGraph with supervised learning on 1mg.com data for structured treatment recommendations. Fine-tuned LLaMA 3.2 1B with LoRA and custom embeddings improving medicine mapping accuracy by 75%. Designed an LLM-driven Email Agent using Transformer models and ChromaDB. Developed async FastAPI pipelines with JWT and memory checkpointing for secure orchestration.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="mb-8 relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right order-2 md:order-1">
+                                <div class="bg-white p-6 rounded-lg shadow-md card-hover transition-all">
+                                    <p>Developed Agent QA, an AI-powered QA automation platform reducing manual testing time by 70% and automating 500+ cases. Built scalable microservices with FastAPI, PostgreSQL, Redis, and WebSockets supporting 100+ concurrent sessions. Created a React dashboard with 20+ reusable components and multi-agent orchestration using Groq LLM.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
+                            <div class="md:w-1/2 md:pl-8 order-1 md:order-2">
+                                <h3 class="text-xl font-bold">Associate Software Engineer</h3>
+                                <p class="text-gray-600">Xenonstack, Mohali</p>
+                                <p class="text-sm text-gray-500">Jan 2024 – April 2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="mb-8 relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right">
+                                <h3 class="text-xl font-bold">Backend Developer</h3>
+                                <p class="text-gray-600">Xenonstack (Akira AI & GenAI Platforms)</p>
+                                <p class="text-sm text-gray-500">Aug 2024 – Nov 2024</p>
+                            </div>
+                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
+                            <div class="md:w-1/2 md:pl-8">
+                                <div class="bg-white p-6 rounded-lg shadow-md card-hover transition-all">
+                                    <p>Developed RESTful APIs for onboarding, JWT auth, and admin dashboards with FastAPI and PostgreSQL. Integrated Redis caching and documented APIs with Swagger for seamless frontend integration and faster delivery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 4 -->
+                    <div class="mb-8 relative">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/2 md:pr-8 mb-4 md:mb-0 md:text-right order-2 md:order-1">
+                                <div class="bg-white p-6 rounded-lg shadow-md card-hover transition-all">
+                                    <p>Reviewed and updated 100+ metadata entries across multiple AWS accounts. Automated data extraction and validation using Python (Boto3), Cloud Grazer, and shell scripts; reduced manual effort by ~70% and improved audit readiness.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block w-8 h-8 rounded-full bg-primary absolute left-1/2 transform -translate-x-1/2"></div>
+                            <div class="md:w-1/2 md:pl-8 order-1 md:order-2">
+                                <h3 class="text-xl font-bold">Data Management & Cloud Infrastructure Engineer</h3>
+                                <p class="text-gray-600">Xenonstack (Amdocs client project)</p>
+                                <p class="text-sm text-gray-500">May 2024 – Aug 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Featured <span class="accent-blue">Projects</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                 <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <img src="Gemini_Generated_Image_s54lwzs54lwzs54l.png" alt="Vibe Coding Studio" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Vibe Coding Studio – AI-Directed Prototype Generator</h3>
+                        <p class="text-gray-600 mb-4">AI-powered platform to generate full-stack application prototypes from plain English prompts. Features include iterative refinement, code preview (Monaco Editor), and one-click deployment to Vercel/Render.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">TypeScript</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">FastAPI</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Redis</span>
+                            <span class="bg-cyan-100 text-cyan-800 text-xs px-3 py-1 rounded-full">Docker</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">LangChain</span>
+                        </div>
+                        <a href="https://github.com/ankitaritgithub/Vibe-Coding-Studio.git" class="text-primary font-semibold hover:underline">View Project →</a>
+                    </div>
+                </div>
+                
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <img src="Gemini_Generated_Image_ylgyciylgyciylgy.png" alt="Library Management System" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Library Management System</h3>
+                        <p class="text-gray-600 mb-4">A scalable, full-stack library management platform with role-based access control for Owners, Admins, and Users. Features JWT-secured authentication and responsive frontend.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Golang</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">Gin</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">CSS</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">React</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">PostgreSQL</span>
+                            <span class="bg-cyan-100 text-cyan-800 text-xs px-3 py-1 rounded-full">Docker</span>
+                        </div>
+                        <a href="https://github.com/ankitaritgithub/library-management-frontend" class="text-primary font-semibold hover:underline">View Project →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition-all">
+                    <img src="image.png" alt="Personal AI Assistant Agent" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Personal AI Assistant Agent</h3>
+                        <p class="text-gray-600 mb-4">Created an intelligent AI agent using Google's ADK with vector search and advanced LLMs to answer queries, access personal data, and automate tasks.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">FastAPI</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full">Google ADK</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full">Vector DB</span>
+                        </div>
+                        <a href="https://github.com/ankitaritgithub?tab=repositories" class="text-primary font-semibold hover:underline">View Project →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#" class="inline-block border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Education
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Education</h2>
+            <div class="max-w-3xl mx-auto bg-gray-50 p-6 rounded-lg shadow-sm">
+                <h3 class="text-xl font-bold">Bachelor of Technology, Computer Science Engineering</h3>
+                <p class="text-gray-600">Lovely Professional University</p>
+                <p class="text-sm text-gray-500">Aug 2020 – Jun 2024</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Awards and Certificates -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Awards & <span class="accent-purple">Certificates</span></h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold">Solved 200+ DSA problems</h3>
+                    <p class="text-gray-600 text-sm">LeetCode, HackerRank</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold">Azure Administrator Associate</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <h3 class="font-semibold">Generative AI with LangChain & Hugging Face</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In <span class="accent-black">Touch</span></h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h3 class="text-xl font-bold mb-4">Contact Information</h3>
+                        <p class="mb-6">Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-4 text-xl"></i>
+                                <span>ankita.s2805@gmail.com</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-phone mr-4 text-xl"></i>
+                                <span>8528821811</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-4 text-xl"></i>
+                                <span>Mohali, India</span>
+                            </div>
+                        </div>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="https://github.com/ankitaritgithub" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors" target="_blank" rel="noopener">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/ankita-singh" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <form id="contactForm" class="space-y-4">
+                            <div>
+                                <label for="name" class="block mb-1">Name</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-1">Email</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white">
+                            </div>
+                            <div>
+                                <label for="message" class="block mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                            </div>
+                            <button type="submit" id="submitBtn" class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Send Message</button>
+                        </form>
+                        <div id="formStatus" class="mt-4 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold gradient-text">Ankita Singh</a>
+                    <p class="mt-2 text-gray-400">Software Engineer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="hover:text-primary transition-colors">About</a>
+                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© 2025 Ankita Singh. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animation on scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-fade-in, .animate-slide-up');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        // Set initial state for animated elements
+        document.querySelectorAll('.animate-fade-in').forEach(el => {
+            el.style.opacity = '0';
+        });
+        document.querySelectorAll('.animate-slide-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+        });
+
+        // Add scroll event listener
+        window.addEventListener('scroll', animateOnScroll);
+        // Trigger once on load
+        window.addEventListener('load', animateOnScroll);
+
+        // Contact form functionality - Using Formspree (more reliable)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const formStatus = document.getElementById('formStatus');
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Prepare form data
+            const formData = new FormData(this);
+            
+            // Send email using Formspree (free and reliable)
+            fetch('https://formspree.io/f/xeorljog', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Success
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.disabled = false;
+                    
+                    formStatus.className = 'mt-4 p-4 bg-green-100 text-green-800 rounded-lg';
+                    formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                    formStatus.classList.remove('hidden');
+                    
+                    // Clear form
+                    this.reset();
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(() => {
+                        formStatus.classList.add('hidden');
+                    }, 5000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch(error => {
+                // Error
+                console.log('Formspree Error:', error);
+                submitBtn.textContent = 'Send Message';
+                submitBtn.disabled = false;
+                
+                formStatus.className = 'mt-4 p-4 bg-red-100 text-red-800 rounded-lg';
+                formStatus.textContent = 'Sorry, there was an error sending your message. Please try again or contact me directly at ankita.s2805@gmail.com';
+                formStatus.classList.remove('hidden');
+                
+                // Hide error message after 8 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 8000);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
