@@ -415,7 +415,7 @@
                 </div>
             </div>
             <div class="text-center mt-12">
-                <a href="#" class="inline-block border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">View All Projects</a>
+                <a href="https://github.com/ankitaritgithub?tab=repositories" class="inline-block border border-primary text-primary px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors">View All Projects</a>
             </div>
         </div>
     </section>
@@ -514,33 +514,54 @@
     <!-- Footer -->
     <footer class="bg-dark text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <a href="#" class="text-2xl font-bold gradient-text">Ankita Singh</a>
-                    <p class="mt-2 text-gray-400">Software Engineer</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Left Column: Let's Work Together -->
+                <div class="text-center md:text-left">
+                    <h3 class="text-2xl font-bold gradient-text mb-4">Let's Work Together</h3>
+                    <p class="text-gray-400 leading-relaxed">I'm always interested in new opportunities and exciting projects. Whether you're looking for a backend developer, need help with AI systems, or want to discuss technology, I'd love to hear from you.</p>
                 </div>
-                <div class="flex space-x-6">
-                    <a href="#home" class="hover:text-primary transition-colors">Home</a>
-                    <a href="#about" class="hover:text-primary transition-colors">About</a>
-                    <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
-                    <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
-                    <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                
+                <!-- Right Column: Navigation & Download -->
+                <div class="text-center md:text-right">
+                    <div class="mb-6">
+                        <!-- <h4 class="text-lg font-semibold mb-4 text-white">Quick Links</h4> -->
+                        <div class="flex flex-wrap justify-center md:justify-end gap-4">
+                            <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                            <a href="#about" class="hover:text-primary transition-colors">About</a>
+                            <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                            <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                            <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center md:justify-end">
+                        <a href="./Ankita_Singh_Software_Engineer_1Year+.pdf" download="Ankita_Singh_Software_Engineer_1Year+.pdf" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center">
+                            <i class="fas fa-download mr-2"></i>
+                            Download CV
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            
+            <!-- Copyright Section -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
                 <p>© 2025 Ankita Singh. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling for anchor links
+        // Smooth scrolling for anchor links (ignore bare '#')
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetSelector = this.getAttribute('href');
+                if (!targetSelector || targetSelector === '#') {
+                    return; // No valid target; allow default behavior
+                }
+                const targetEl = document.querySelector(targetSelector);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
 
